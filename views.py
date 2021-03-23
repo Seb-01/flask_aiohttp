@@ -39,7 +39,7 @@ class User(web.View):
             raise web.HTTPUnauthorized()  # not authorization
 
         # проверка роли и пароля администратора
-        # подготовка к декодированию: 'Basic R29zaGE6R29zaDU1NS1naGoz' (нам нужен код после пробела)
+        # подготовка к декодированию: 
         auth_for_64decode = auth.split(' ')
         pre_credential = (base64.b64decode(auth_for_64decode[1])).decode('utf-8')
 
@@ -96,7 +96,7 @@ class Users(web.View):
             raise web.HTTPUnauthorized()  # not authorization
 
         # проверка роли и пароля администратора
-        #подготовка к декодированию: 'Basic R29zaGE6R29zaDU1NS1naGoz' (нам нужен код после пробела)
+        #подготовка к декодированию: 
         auth_for_64decode=auth.split(' ')
         pre_credential = (base64.b64decode(auth_for_64decode[1])).decode('utf-8')
 
@@ -158,7 +158,7 @@ class Users(web.View):
             raise web.HTTPUnauthorized()  # not authorization
 
         # проверка роли и пароля администратора
-        # подготовка к декодированию: 'Basic R29zaGE6R29zaDU1NS1naGoz' (нам нужен код после пробела)
+        # подготовка к декодированию: 
         auth_for_64decode = auth.split(' ')
         pre_credential = (base64.b64decode(auth_for_64decode[1])).decode('utf-8')
 
